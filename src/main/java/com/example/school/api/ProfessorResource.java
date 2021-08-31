@@ -1,4 +1,4 @@
-package com.example.school.presentation;
+package com.example.school.api;
 
 import java.util.List;
 
@@ -13,11 +13,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping(path = "/professors")
 @RequiredArgsConstructor
+@Tag(name = "Professor")
 public class ProfessorResource {
     
     private final ProfessorService professorService;

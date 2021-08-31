@@ -1,4 +1,4 @@
-package com.example.school.presentation;
+package com.example.school.api;
 
 import java.util.List;
 
@@ -15,11 +15,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping(path = "/modules")
 @RequiredArgsConstructor
+@Tag(name = "Module")
 public class ModuleResource {
     
     private final ModuleService moduleService;

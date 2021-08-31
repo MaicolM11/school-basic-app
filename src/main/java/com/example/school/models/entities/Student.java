@@ -33,7 +33,7 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String fullname;
-    private LocalDate birthDate;
+    private LocalDate birthdate;
     private String career;
 
     @JsonIgnore

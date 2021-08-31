@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+
+  mysql_db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: school
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - '3306:3306'
+
+  api:
+    build: .
+    ports:
+      - "8080:8080" 
+    restart: always
+    depends_on: 
+      - mysql_db 
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_db:3306/database?autoReconnect=true&useSSL=false
+      

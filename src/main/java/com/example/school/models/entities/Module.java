@@ -32,7 +32,7 @@ public class Module {
     private Integer actualStudents = 0;
 
     @JsonIgnore
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Professor professor;
 
     @JsonIgnore
